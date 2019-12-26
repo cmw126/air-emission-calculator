@@ -1,0 +1,153 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <a href="https://www.cevalogistics.com/"><img
+    width="80%"
+    alt="CEVA logo"
+    src="../assets/logo.svg"
+  /></a>
+  <!-- <span>Carbondex Calculator</span> -->
+  <div class="spacer"></div>
+  <div class="navigation">
+    <ul>
+      <li><a href="/about-us">About us</a></li>
+      <li><a href="/news-and-media" class="">News & Media</a></li>
+      <li><a href="/select-a-country" class="lightbox-link">CEVA Worldwide</a></li>
+      <li><a href="/contact-us" class="">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+<br><br>
+<div class="schedule">
+<form [formGroup]="portForm">
+  <table>
+  <!-- <tr>
+    <td></td>
+    <td></td>
+    <td>
+      <div mat-button #tooltip="matTooltip"
+    matTooltip="
+    1) The below schedule is obtained from the latest flight schedule released by OAG®. Actual flight schedule might change as per the carriers discretion
+    
+    2) The carbondex is calculated based on the average carbon emission done by the carrier depending on the fleet type and age for maximum payload
+    
+    3) Actual carbon emission may vary depending on the type and age of the aircraft and the payload for the particular flight
+    
+    4) The distance between two airports is calculated based on the greater circle distance between geographic co-ordinates of the locations"
+    matTooltipClass="tooltip">
+    <b>* Disclaimer</b>
+    </div>
+    </td>
+  </tr> -->
+  <tr>
+    <td>
+    <mat-form-field appearance="legacy">
+      <input type="text" placeholder="enter City" matInput [formControl]="fromCity" [matAutocomplete]="autoFrom" [value]="from">
+      <!--<mat-autocomplete #auto="matAutocomplete" (selectionChange)="toPortChange($event)" > -->
+      <mat-autocomplete #autoFrom="matAutocomplete" (optionSelected)="fromCityChange($event.option.value)">
+        <mat-option *ngFor="let fromcity of fromCityOptions | async" [value]="fromcity">
+          {{fromcity}}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-label><mat-icon>room</mat-icon> <b> From City</b></mat-label>
+    </mat-form-field>
+    </td>
+    <td>
+    <mat-form-field appearance="legacy">
+      <!--<mat-select formControlName="destination" placeholder="Destination Port" (selectionChange)="toPortChange($event)">
+        <mat-option *ngFor="let p of toDestinationAirport" [value]="p.toAirp">{{p.toAirp}}</mat-option>
+      </mat-select>-->
+
+      <input type="text" placeholder="enter City" matInput [formControl]="toCity" [matAutocomplete]="autoTo" [value]="to">
+      <!--<mat-autocomplete #auto="matAutocomplete" (selectionChange)="toPortChange($event)" > -->
+      <mat-autocomplete #autoTo="matAutocomplete" (optionSelected)="toCityChange($event.option.value)">
+        <mat-option *ngFor="let tocity of toCityOptions | async" [value]="tocity">
+          {{tocity}}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-label><mat-icon>room</mat-icon> <b> To City</b></mat-label>
+    </mat-form-field>
+    </td>
+
+    <td>
+      <mat-form-field appearance="legacy">
+        <mat-label>Weight (KG)</mat-label>
+        <input pattern="[0-9]" matInput formControlName="weight" (keypress)="weightChange()" maxlength="5">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field><br/>
+    </td>
+  </tr>
+  <tr [hidden]="hideSchedule">
+    <td><b>Total Distance (km):</b> {{ km }}</td>
+  </tr>
+  </table>
+  <p></p>          
+</form>
+<br>
+<table class="schedule" [hidden]="hideSchedule"  matSort (matSortChange)="sortData($event)">
+<!--<tr>
+  <th>Available Schedule</th>
+  <th></th>
+  <th></th>1.5px solid#ddd
+  <th></th>
+</tr>-->
+<mat-spinner *ngIf="loading"></mat-spinner>
+<caption style="text-align: left;"><b>Available Schedule</b></caption>
+<tr>
+  <th rowspan="2" style="width: 6%;">Flight<br/>Number</th>
+  <th rowspan="2" style="width: 6%;">Aircraft</th>
+  <th rowspan="2" style="width: 16%; padding-left:2.4%;" mat-sort-header="carbondexunit">Average Carbondex<br/>for max payload <br/>(kg CO2/1000km-kg)</th>
+  <th colspan="7" style="width: 15%; text-align: center; border-bottom: 1.5px solid#ddd;">Available Days</th>
+  <th rowspan="2" style="width: 14.5%; padding-left: 2.5%;" mat-sort-header="sdate">Start Date<br/>(YYYY-MM-DD)</th>
+  <th rowspan="2" style="width: 14.5%; padding-left: 2%;" mat-sort-header="edate">Expiry Date<br/>(YYYY-MM-DD)</th>
+  <th rowspan="2" style="width: 9%; padding-left: 1.1%;" mat-sort-header="dtime">Departure<br/>Time <br/> (HH:MM)</th>
+  <th rowspan="2" style="width: 9%; padding-left: 1.4%;" mat-sort-header="atime">Arrival<br/>Time <br/> (HH:MM)</th>
+  <!--<th rowspan="2" style="width: 4%;">Legs</th>
+  <th rowspan="2" style="width: 6%;">Stopover</th> -->
+  <!-- <th rowspan="2" style="width: 6%;">Total<br/>Distance<br/>(km)</th> -->
+  <th rowspan="2" style="width: 12%; padding-left: 2%" mat-sort-header="totalcarbondex">Total Carbon Emission<br/>for shipment <br/>(kg CO2)</th>
+</tr>
+<tr>
+  <th>Mo</th>
+  <th>Tu</th>
+  <th>We</th>
+  <th>Th</th>
+  <th>Fr</th>
+  <th>Sa</th>
+  <th>Su</th>
+</tr>
+<tr *ngFor="let d of sortedData">
+  <td>{{ d.flight }}</td>
+  <td>{{ d.aircraft }}</td>
+  <td>{{ getCarbondex(d.flight)==='0.000'?'carbondex not available':getCarbondex(d.flight) }}</td>
+  <!-- for loop the value -->
+  <!-- <td *ngFor="let s of getSchedule(d.servDay)"> <b [ngStyle]="{'color':getColor(s)}">{{s}}</b></td> -->
+  <td *ngFor="let s of getSchedule(d.servDay)"><span [innerHTML]="availableDay(s)"></span></td>
+  <!-- end loop -->
+  <td>{{ toDateFormat(d.effectDate) }}</td>
+  <td>{{ toDateFormat(d.expiryDate) }}</td>
+  <td>{{ toHHMM(d.dtime) }}</td>
+  <td>{{ toHHMM(d.atime) }}</td>
+  <!--<td>? {{ d.leg }}</td>
+  <td>? CGK</td> -->
+  <!-- <td>{{ km }}</td> -->
+  <td>{{ getCarbondex(d.flight)==='0.000'?'N/A':convertDecimal(getCarbondex(d.flight)*(km/1000)*kg) }}</td>
+</tr>
+
+</table>
+</div>
+
+<footer>
+    <div mat-button #tooltip="matTooltip"
+    matTooltip="
+    1) The below schedule is obtained from the latest flight schedule released by OAG®. Actual flight schedule might change as per the carriers discretion
+    
+    2) The carobondex below is calculated based on the average carbon emission done by the carrier for existing available fleet type
+    
+    3) Actual carbon emission may vary depending on the type and age of the aircraft and the payload for the particular flight
+    
+    4) The distance between two locations is calculated based on the greater circle distance for geographic co-ordinates"
+    matTooltipClass="tooltip">
+    <b>* Disclaimer</b>
+  </div>
+</footer>
+<router-outlet></router-outlet>

@@ -1,0 +1,652 @@
+﻿[
+    {
+        "Carrier": "China Cargo Airlines",
+        "Code": "CK",
+        "Carbondex": "0.31255815"
+    },
+    {
+        "Carrier": "NIPPON CARGO AIRLINES",
+        "Code": "KZ",
+        "Carbondex": "0.350438052"
+    },
+    {
+        "Carrier": "Cargolux",
+        "Code": "CV",
+        "Carbondex": "0.366252043"
+    },
+    {
+        "Carrier": "Airbridge Cargo (Russia)",
+        "Code": "RU",
+        "Carbondex": "0.389616905"
+    },
+    {
+        "Carrier": "Polar Air Cargo",
+        "Code": "PO",
+        "Carbondex": "0.401656339"
+    },
+    {
+        "Carrier": "Centurion Air Cargo-Challenge Cargo",
+        "Code": "WE",
+        "Carbondex": "0.406713875"
+    },
+    {
+        "Carrier": "Sky Lease Cargo",
+        "Code": "GG",
+        "Carbondex": "0.419759782"
+    },
+    {
+        "Carrier": "Cathay Pacific",
+        "Code": "CX",
+        "Carbondex": "0.445426721"
+    },
+    {
+        "Carrier": "United Parcel Service (UPS)",
+        "Code": "5X",
+        "Carbondex": "0.446988317"
+    },
+    {
+        "Carrier": "Singapore Airline",
+        "Code": "SQ",
+        "Carbondex": "0.45209578"
+    },
+    {
+        "Carrier": "Atlas Air (USA) Giant",
+        "Code": "5Y",
+        "Carbondex": "0.46174249"
+    },
+    {
+        "Carrier": "DHL",
+        "Code": "D0",
+        "Carbondex": "0.471584971"
+    },
+    {
+        "Carrier": "Qatar Airways",
+        "Code": "QR",
+        "Carbondex": "0.47741708"
+    },
+    {
+        "Carrier": "Emirates",
+        "Code": "EK",
+        "Carbondex": "0.477978288"
+    },
+    {
+        "Carrier": "Hong Kong Airlines",
+        "Code": "HX",
+        "Carbondex": "0.481645403"
+    },
+    {
+        "Carrier": "Virgin Atlantic",
+        "Code": "VS",
+        "Carbondex": "0.48575155"
+    },
+    {
+        "Carrier": "Air Hong Kong",
+        "Code": "LD",
+        "Carbondex": "0.490901505"
+    },
+    {
+        "Carrier": "Etihad Airways",
+        "Code": "EY",
+        "Carbondex": "0.501800345"
+    },
+    {
+        "Carrier": "Thai Airways",
+        "Code": "TG",
+        "Carbondex": "0.505843669"
+    },
+    {
+        "Carrier": "EVA Airways",
+        "Code": "BR",
+        "Carbondex": "0.510939078"
+    },
+    {
+        "Carrier": "All Nippon Airways",
+        "Code": "NH",
+        "Carbondex": "0.514894618"
+    },
+    {
+        "Carrier": "Japan Airlines",
+        "Code": "JL",
+        "Carbondex": "0.522739749"
+    },
+    {
+        "Carrier": "Saudi Arabian Airlines",
+        "Code": "SV",
+        "Carbondex": "0.524461598"
+    },
+    {
+        "Carrier": "Kalitta Air (USA)",
+        "Code": "K4",
+        "Carbondex": "0.526536266"
+    },
+    {
+        "Carrier": "China Airlines",
+        "Code": "CI",
+        "Carbondex": "0.528911993"
+    },
+    {
+        "Carrier": "SriLankan Airlines",
+        "Code": "UL",
+        "Carbondex": "0.534642624"
+    },
+    {
+        "Carrier": "Kuwait Airways",
+        "Code": "KU",
+        "Carbondex": "0.534753459"
+    },
+    {
+        "Carrier": "Korean Air",
+        "Code": "KE",
+        "Carbondex": "0.535836891"
+    },
+    {
+        "Carrier": "Philippine Airlines",
+        "Code": "PR",
+        "Carbondex": "0.537883456"
+    },
+    {
+        "Carrier": "Air New Zealand",
+        "Code": "NZ",
+        "Carbondex": "0.544172738"
+    },
+    {
+        "Carrier": "Turkish Airlines",
+        "Code": "TK",
+        "Carbondex": "0.559046176"
+    },
+    {
+        "Carrier": "LATAM Airlines Chile",
+        "Code": "LA",
+        "Carbondex": "0.559060926"
+    },
+    {
+        "Carrier": "Icelandair",
+        "Code": "FI",
+        "Carbondex": "0.561243939"
+    },
+    {
+        "Carrier": "Malaysia Airlines",
+        "Code": "MH",
+        "Carbondex": "0.56202388"
+    },
+    {
+        "Carrier": "Vietnam Airlines",
+        "Code": "VN",
+        "Carbondex": "0.562280999"
+    },
+    {
+        "Carrier": "Hainan Airlines",
+        "Code": "HU",
+        "Carbondex": "0.563239964"
+    },
+    {
+        "Carrier": "MNG airlines",
+        "Code": "MB",
+        "Carbondex": "0.563782591"
+    },
+    {
+        "Carrier": "Kenya Airways",
+        "Code": "KQ",
+        "Carbondex": "0.56532205"
+    },
+    {
+        "Carrier": "Aeroflot",
+        "Code": "SU",
+        "Carbondex": "0.566531558"
+    },
+    {
+        "Carrier": "Avianca",
+        "Code": "AV",
+        "Carbondex": "0.570783767"
+    },
+    {
+        "Carrier": "Ethiopian Airlines",
+        "Code": "ET",
+        "Carbondex": "0.570964597"
+    },
+    {
+        "Carrier": "Asiana Airlines",
+        "Code": "OZ",
+        "Carbondex": "0.574444258"
+    },
+    {
+        "Carrier": "Air India",
+        "Code": "AI",
+        "Carbondex": "0.577847207"
+    },
+    {
+        "Carrier": "Hawaiian Airlines",
+        "Code": "HA",
+        "Carbondex": "0.578064769"
+    },
+    {
+        "Carrier": "Cebu Pacific Air (philippine)",
+        "Code": "5J",
+        "Carbondex": "0.578518707"
+    },
+    {
+        "Carrier": "Austral",
+        "Code": "AU",
+        "Carbondex": "0.582708867"
+    },
+    {
+        "Carrier": "Fiji Airways (Air Pacific stop 2013)",
+        "Code": "FJ",
+        "Carbondex": "0.582848217"
+    },
+    {
+        "Carrier": "Air China",
+        "Code": "CA",
+        "Carbondex": "0.583172711"
+    },
+    {
+        "Carrier": "KLM Royal Dutch Airlines",
+        "Code": "KL",
+        "Carbondex": "0.583986375"
+    },
+    {
+        "Carrier": "Finnair",
+        "Code": "AY",
+        "Carbondex": "0.585054863"
+    },
+    {
+        "Carrier": "EgyptAir",
+        "Code": "MS",
+        "Carbondex": "0.585948104"
+    },
+    {
+        "Carrier": "Royal Jordanian Airlines",
+        "Code": "RJ",
+        "Carbondex": "0.588678407"
+    },
+    {
+        "Carrier": "Garuda",
+        "Code": "GA",
+        "Carbondex": "0.590061196"
+    },
+    {
+        "Carrier": "China Eastern Airlines",
+        "Code": "MU",
+        "Carbondex": "0.591664283"
+    },
+    {
+        "Carrier": "Iberia",
+        "Code": "IB",
+        "Carbondex": "0.591993447"
+    },
+    {
+        "Carrier": "FedEx Express",
+        "Code": "FX",
+        "Carbondex": "0.593290614"
+    },
+    {
+        "Carrier": "Aeromexico",
+        "Code": "AM",
+        "Carbondex": "0.594261103"
+    },
+    {
+        "Carrier": "Xiamen Airlines",
+        "Code": "MF",
+        "Carbondex": "0.598749535"
+    },
+    {
+        "Carrier": "Jet Airways (INDIA) LTD",
+        "Code": "9W",
+        "Carbondex": "0.598883166"
+    },
+    {
+        "Carrier": "South African Airways",
+        "Code": "SA",
+        "Carbondex": "0.599222506"
+    },
+    {
+        "Carrier": "Aerolineas Argentinas",
+        "Code": "AR",
+        "Carbondex": "0.600278648"
+    },
+    {
+        "Carrier": "Pakistan International Airlines",
+        "Code": "PK",
+        "Carbondex": "0.601215897"
+    },
+    {
+        "Carrier": "Shanghai Airlines",
+        "Code": "FM",
+        "Carbondex": "0.60166823"
+    },
+    {
+        "Carrier": "LATAM Airlines Brasil",
+        "Code": "JJ",
+        "Carbondex": "0.601759031"
+    },
+    {
+        "Carrier": "Sichuan Airlines",
+        "Code": "3U",
+        "Carbondex": "0.60221453"
+    },
+    {
+        "Carrier": "Air France",
+        "Code": "AF",
+        "Carbondex": "0.603931926"
+    },
+    {
+        "Carrier": "Wizz Air",
+        "Code": "W6",
+        "Carbondex": "0.604335775"
+    },
+    {
+        "Carrier": "SilkAir",
+        "Code": "MI",
+        "Carbondex": "0.605517688"
+    },
+    {
+        "Carrier": "China Southern Airlines",
+        "Code": "CZ",
+        "Carbondex": "0.606904261"
+    },
+    {
+        "Carrier": "Gulf Air",
+        "Code": "GF",
+        "Carbondex": "0.60788834"
+    },
+    {
+        "Carrier": "Cathay Dragon (Dragon Air stops 2016)",
+        "Code": "KA",
+        "Carbondex": "0.609237167"
+    },
+    {
+        "Carrier": "AIR MAURITIUS CENTRE",
+        "Code": "MK",
+        "Carbondex": "0.612888604"
+    },
+    {
+        "Carrier": "Mandarin Airlines",
+        "Code": "AE",
+        "Carbondex": "0.613480207"
+    },
+    {
+        "Carrier": "British Airways",
+        "Code": "BA",
+        "Carbondex": "0.614378452"
+    },
+    {
+        "Carrier": "Pegasus Airlines",
+        "Code": "PC",
+        "Carbondex": "0.616013625"
+    },
+    {
+        "Carrier": "Qantas",
+        "Code": "QF",
+        "Carbondex": "0.617235026"
+    },
+    {
+        "Carrier": "Spirit Airlines",
+        "Code": "NK",
+        "Carbondex": "0.618183805"
+    },
+    {
+        "Carrier": "Air Canada",
+        "Code": "AC",
+        "Carbondex": "0.618783174"
+    },
+    {
+        "Carrier": "Air Transat",
+        "Code": "TS",
+        "Carbondex": "0.621999179"
+    },
+    {
+        "Carrier": "Aer Lingus",
+        "Code": "EI",
+        "Carbondex": "0.622250049"
+    },
+    {
+        "Carrier": "Compass Airlines *",
+        "Code": "CP",
+        "Carbondex": "0.622769852"
+    },
+    {
+        "Carrier": "AirAsia",
+        "Code": "AK",
+        "Carbondex": "0.622825534"
+    },
+    {
+        "Carrier": "Swiss International Air Lines",
+        "Code": "LX",
+        "Carbondex": "0.623049658"
+    },
+    {
+        "Carrier": "Frontier Airlines",
+        "Code": "F9",
+        "Carbondex": "0.625462593"
+    },
+    {
+        "Carrier": "Jetstar",
+        "Code": "JQ",
+        "Carbondex": "0.625826627"
+    },
+    {
+        "Carrier": "Shenzhen Airlines",
+        "Code": "ZH",
+        "Carbondex": "0.62626594"
+    },
+    {
+        "Carrier": "COPA Airlines",
+        "Code": "CM",
+        "Carbondex": "0.627936133"
+    },
+    {
+        "Carrier": "Ryanair",
+        "Code": "FR",
+        "Carbondex": "0.628811765"
+    },
+    {
+        "Carrier": "Virgin America",
+        "Code": "VX",
+        "Carbondex": "0.631381988"
+    },
+    {
+        "Carrier": "Lufthansa",
+        "Code": "LH",
+        "Carbondex": "0.633721781"
+    },
+    {
+        "Carrier": "Royal Air Maroc",
+        "Code": "AT",
+        "Carbondex": "0.634304368"
+    },
+    {
+        "Carrier": "Alitalia",
+        "Code": "AZ",
+        "Carbondex": "0.634509191"
+    },
+    {
+        "Carrier": "easyJet",
+        "Code": "U2",
+        "Carbondex": "0.638871104"
+    },
+    {
+        "Carrier": "El Al Israel Airlines",
+        "Code": "LY",
+        "Carbondex": "0.641507257"
+    },
+    {
+        "Carrier": "United Airlines",
+        "Code": "UA",
+        "Carbondex": "0.644704111"
+    },
+    {
+        "Carrier": "American Airlines",
+        "Code": "AA",
+        "Carbondex": "0.646526535"
+    },
+    {
+        "Carrier": "JetBlue Airways",
+        "Code": "B6",
+        "Carbondex": "0.647880756"
+    },
+    {
+        "Carrier": "Aegean Airlines",
+        "Code": "A3",
+        "Carbondex": "0.650202396"
+    },
+    {
+        "Carrier": "GOL Transportes Aereos",
+        "Code": "G3",
+        "Carbondex": "0.654409412"
+    },
+    {
+        "Carrier": "Alaska Airlines",
+        "Code": "AS",
+        "Carbondex": "0.656757791"
+    },
+    {
+        "Carrier": "Air Macau",
+        "Code": "NX",
+        "Carbondex": "0.657478246"
+    },
+    {
+        "Carrier": "TAME",
+        "Code": "EQ",
+        "Carbondex": "0.660829528"
+    },
+    {
+        "Carrier": "TAP Air Portugal",
+        "Code": "TP",
+        "Carbondex": "0.663040855"
+    },
+    {
+        "Carrier": "Air Berlin",
+        "Code": "AB",
+        "Carbondex": "0.66677457"
+    },
+    {
+        "Carrier": "SAS Scandinavian Airlines",
+        "Code": "SK",
+        "Carbondex": "0.669154304"
+    },
+    {
+        "Carrier": "Amerijet International",
+        "Code": "M6",
+        "Carbondex": "0.672661171"
+    },
+    {
+        "Carrier": "Southwest Airlines",
+        "Code": "WN",
+        "Carbondex": "0.689361189"
+    },
+    {
+        "Carrier": "Cubana",
+        "Code": "CU",
+        "Carbondex": "0.7000289"
+    },
+    {
+        "Carrier": "Monarch Airlines",
+        "Code": "ZB",
+        "Carbondex": "0.703826348"
+    },
+    {
+        "Carrier": "Republic Airways *",
+        "Code": "RW",
+        "Carbondex": "0.711972382"
+    },
+    {
+        "Carrier": "Mesa Airlines *",
+        "Code": "YV",
+        "Carbondex": "0.719951272"
+    },
+    {
+        "Carrier": "Delta Airlines",
+        "Code": "DL",
+        "Carbondex": "0.725857066"
+    },
+    {
+        "Carrier": "Brussels Airlines",
+        "Code": "SN",
+        "Carbondex": "0.735744912"
+    },
+    {
+        "Carrier": "Yangtze River Airlines",
+        "Code": "Y8",
+        "Carbondex": "0.74454077"
+    },
+    {
+        "Carrier": "Austrian Airlines",
+        "Code": "OS",
+        "Carbondex": "0.747210441"
+    },
+    {
+        "Carrier": "Shuttle America *",
+        "Code": "S5",
+        "Carbondex": "0.753551521"
+    },
+    {
+        "Carrier": "AtlasGlobal",
+        "Code": "KK",
+        "Carbondex": "0.756411821"
+    },
+    {
+        "Carrier": "Sky Regional Airlines lnc",
+        "Code": "RS",
+        "Carbondex": "0.75728814"
+    },
+    {
+        "Carrier": "GoJet Airlines *",
+        "Code": "G7",
+        "Carbondex": "0.803630253"
+    },
+    {
+        "Carrier": "SkyWest Airlines *",
+        "Code": "OO",
+        "Carbondex": "0.819501589"
+    },
+    {
+        "Carrier": "Iran Air",
+        "Code": "IR",
+        "Carbondex": "0.835189674"
+    },
+    {
+        "Carrier": "Air Niugini",
+        "Code": "PX",
+        "Carbondex": "0.854854226"
+    },
+    {
+        "Carrier": "Horizon Air",
+        "Code": "QX",
+        "Carbondex": "0.920994672"
+    },
+    {
+        "Carrier": "Allegiant Air",
+        "Code": "G4",
+        "Carbondex": "0.922240501"
+    },
+    {
+        "Carrier": "Inter Air (South Africa)",
+        "Code": "D6",
+        "Carbondex": "0.927049909"
+    },
+    {
+        "Carrier": "Air Wisconsin (US Airways Express)",
+        "Code": "ZW",
+        "Carbondex": "0.931565148"
+    },
+    {
+        "Carrier": "Envoy (American Eagle stops 2014)",
+        "Code": "MQ",
+        "Carbondex": "0.944317094"
+    },
+    {
+        "Carrier": "Jazz Air (Air Canada Express)",
+        "Code": "QK",
+        "Carbondex": "0.975768193"
+    },
+    {
+        "Carrier": "ExpressJet *",
+        "Code": "XE",
+        "Carbondex": "1.045882666"
+    },
+    {
+        "Carrier": "Trans States Airlines *",
+        "Code": "AX",
+        "Carbondex": "1.146333817"
+    }
+]
