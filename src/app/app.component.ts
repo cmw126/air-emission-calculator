@@ -705,7 +705,7 @@ export class AppComponent {
   }
 
   toCityChange(event) {
-    let filteredSABC = this.sabc.filter(data=>data.toCityNameDisplay===event)[0];
+    const filteredSABC = this.sabc.filter(data=>data.toCityNameDisplay===event)[0];
     this.toCountry = filteredSABC.toCountryName; //this.sabc.filter(data=>data.toCityNameDisplay===event)[0].toCountryName; //this.getCountryName(this.sabc.filter(data=>data.fromCityNameDisplay===event)[0].fromCtry);
     this.to = event + ', ' + this.toCountry;
     // perform search
@@ -739,7 +739,7 @@ export class AppComponent {
   }
 
   getSchedule(servDay: string): string[] {
-    let tbs = [];
+    const tbs = [];
     for(let i=0; i<servDay.length; i++){
       tbs.push(servDay.charAt(i) ==='.'? 'N' : 'Y');
     }
@@ -747,13 +747,13 @@ export class AppComponent {
   }
 
   getCountryName(countryCode: string) {
-    let result:Region[] = this.regions.filter(data=>data.countryCode === countryCode);
+    const result:Region[] = this.regions.filter(data=>data.countryCode === countryCode);
     return result[0].country;
   }
 
   getCityName(code: string) {
-    let result:Region[] = this.regions.filter(data=>data.portCode === code);
-    let v = result[0].location!==undefined ? result[0].location : code;
+    const result:Region[] = this.regions.filter(data=>data.portCode === code);
+    const v = result[0].location!==undefined ? result[0].location : code;
     return v; // result[0].location!==undefined?result[0].location:code;
   }
 
@@ -769,11 +769,11 @@ export class AppComponent {
     }
   }
 
-  getCarbondex(param:string) {
+  getCarbondex(param:string): any {
 
     let carbondex = '0';
-    let result = this.carbondex.filter(data => data.Code === param.substring(0,2));
-    if(result.length!==0){
+    const result = this.carbondex.filter(data => data.Code === param.substring(0,2));
+    if(result.length!==0) {
       carbondex = result[0].Carbondex;
     }
     return parseFloat(carbondex).toFixed(3)
@@ -800,7 +800,8 @@ export class AppComponent {
         case 'edate': return compare(a.expiryDate, b.expiryDate, isAsc);
         case 'dtime': return compare(this.toHHMM(a.dtime), this.toHHMM(b.dtime), isAsc);
         case 'atime': return compare(this.toHHMM(a.atime), this.toHHMM(b.atime), isAsc);
-        case 'totalcarbondex': return compare(<any>this.getCarbondex(a.flight)*(this.km/1000)*this.kg, <any>this.getCarbondex(b.flight) *(this.km/1000)*this.kg, isAsc);
+        // tslint:disable-next-line:max-line-length
+        case 'totalcarbondex': return compare(this.getCarbondex(a.flight) as any * (this.km/1000)*this.kg, this.getCarbondex(b.flight) as any * (this.km/1000) * this.kg, isAsc);
         default: return 0;
       }
     });
@@ -808,19 +809,19 @@ export class AppComponent {
 
 
   getDistance(from:string, to:string): number {
-    let fromAir = this.airportLatLon.filter(data => data.iata === from);
-    let toAir = this.airportLatLon.filter(data => data.iata === to);
-    let fromLat = parseInt(fromAir[0].lat);
-    let fromlon = parseInt(fromAir[0].lon);
-    let toLat = parseInt(toAir[0].lat);
-    let toLon = parseInt(toAir[0].lon);
+    const fromAir = this.airportLatLon.filter(data => data.iata === from);
+    const toAir = this.airportLatLon.filter(data => data.iata === to);
+    const fromLat = parseInt(fromAir[0].lat);
+    const fromlon = parseInt(fromAir[0].lon);
+    const toLat = parseInt(toAir[0].lat);
+    const toLon = parseInt(toAir[0].lon);
     // let distance = Math.acos(Math.cos(this.toRadians(90 - 22.308901)) // FROMAIRPORTLAT
     // * Math.cos(this.toRadians(90 - 2.745579957962)) // TOAIRPORTLAT
     // + Math.sin(this.toRadians(90 - 22.308901)) // FROMAIRPORTLAT
     // * Math.sin(this.toRadians(90 - 2.745579957962)) // TOAIRPORTLAT
     // // FROMAIRPORTLONG - TOAIRPORTLONG
     // * Math.cos(this.toRadians(113.915001) - this.toRadians(101.70999908447))) * 6371;
-    let distance = Math.acos(Math.cos(this.toRadians(90 - fromLat)) // FROMAIRPORTLAT
+    const distance = Math.acos(Math.cos(this.toRadians(90 - fromLat)) // FROMAIRPORTLAT
     * Math.cos(this.toRadians(90 - toLat)) // TOAIRPORTLAT
     + Math.sin(this.toRadians(90 - fromLat)) // FROMAIRPORTLAT
     * Math.sin(this.toRadians(90 - toLat)) // TOAIRPORTLAT
